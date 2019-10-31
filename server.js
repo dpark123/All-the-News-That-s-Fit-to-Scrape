@@ -5,7 +5,7 @@ var mongoose = require("mongoose");
 var cheerio = require("cheerio");
 var axios = require("axios");
 
-var db = require("./models");
+var db = require("./models/Index");
 
 var PORT = process.env.PORT || 8080;
 
@@ -36,7 +36,7 @@ var results = {};
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongooseHW";
 
-
+mongodb://<dbuser>:<dbpassword>@ds053148.mongolab.com:53148/<mongooseHW>
 
 // Connect to the Mongo DB
 mongoose.connect(MONGODB_URI, { useUnifiedTopology:true, useNewUrlParser: true });
