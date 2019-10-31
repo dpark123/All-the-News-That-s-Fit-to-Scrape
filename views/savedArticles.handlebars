@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Mongo Scraper</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">Home</a>
+      <a class="nav-item nav-link" href="#">Saved Articles</a>
+      <button type="button" class="btn btn-danger">CLEAR ARTICLES!</button>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid text-center"
+  style="background-image: url(https://image.shutterstock.com/z/stock-photo-graphical-modern-digital-world-news-background-technology-communication-background-581049010.jpg)">
+  <div class="container">
+    <h1 class="display-4">Mongo Scraper</h1>
+    <p class="lead">New York Times Edition</p>
+  </div>
+</div>
+
+{{#each savedlist}}
+<div class="card w-100">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{summary}}</p>
+    <p>https://www.nytimes.com/section/world{{link}}</p>
+    <button type="button" class="btn btn-primary" id="deleteSaved">Delete from Saved</button>
+    <button type="button" class="btn btn-primary" id="articleNotes">Article Notes</button>
+  </div>
+</div>
+{{/each}}
