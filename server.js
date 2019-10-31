@@ -34,12 +34,9 @@ app.set("view engine", "handlebars");
 // var routes = require("./controllers/articleController");
 var results = {};
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongooseHW";
-
-mongodb://<dbuser>:<dbpassword>@ds053148.mongolab.com:53148/<mongooseHW>
 
 // Connect to the Mongo DB
-mongoose.connect(MONGODB_URI, { useUnifiedTopology:true, useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/mongooseHW", { useUnifiedTopology:true, useNewUrlParser: true });
 // Make a request via axios to grab the HTML body from the site of your choice
 app.get("/scrape", function (req, res) {
   axios.get("https://www.nytimes.com/section/world/").then(function (response) {
