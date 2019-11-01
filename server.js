@@ -9,7 +9,8 @@ var db = require("./models/Index");
 
 var PORT = process.env.PORT || 8080;
 
-
+var MONGODB_URI = process.env.MONGDOB_URI || "mongodb://localhost/mongooseHW";
+mongoose.connect(MONGODB_URI);
 // Initialize Express
 var app = express();
 
@@ -34,8 +35,7 @@ app.set("view engine", "handlebars");
 // var routes = require("./controllers/articleController");
 var results = {};
 
-var MONGODB_URI = process.env.MONGDOB_URI || "mongodb://localhost/mongooseHW";
-mongoose.connect(MONGODB_URI);
+
 
 // Connect to the Mongo DB
 // mongoose.connect("mongodb://localhost/mongooseHW", { useUnifiedTopology:true, useNewUrlParser: true });
