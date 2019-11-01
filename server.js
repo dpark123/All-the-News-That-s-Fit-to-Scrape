@@ -9,7 +9,7 @@ var db = require("./models/Index");
 
 var PORT = process.env.PORT || 8080;
 
-var MONGODB_URI = process.env.MONGDOB_URI || "mongodb://localhost/mongooseHW";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongooseHW";
 mongoose.connect(MONGODB_URI);
 // Initialize Express
 var app = express();
