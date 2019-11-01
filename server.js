@@ -48,7 +48,7 @@ app.get("/scrape", function (req, res) {
       var link = $(element).children("h2").children("a").attr("href");
       var title = $(element).children("h2").children("a").text();
       var summary = $(element).children("p").text();
-
+      if(i == 10) break;
   
       results.title = title;
       results.link = link;
@@ -65,6 +65,7 @@ app.get("/scrape", function (req, res) {
           // If an error occurred, log it
           console.log(err);
         });
+        
 
     });
     res.send("Scrape Complete");

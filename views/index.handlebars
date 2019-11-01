@@ -9,7 +9,7 @@
       <a class="nav-item nav-link" href="/">Home</a>
       <a class="nav-item nav-link" href="/savedArticles">Saved Articles</a>
       <button type="button" class="btn btn-warning">SCRAPE NEW ARTICLES!</button>
-      <button type="button" class="btn btn-danger">CLEAR ARTICLES!</button>
+      <button type="button" class="btn btn-danger" id="clear-all">CLEAR ARTICLES!</button>
     </div>
   </div>
 </nav>
@@ -30,7 +30,7 @@
 {{!-- <div id="articles"></div> --}}
 
 {{#each articlelist}}
-<div class="card w-100">
+<div class="card w-100" id="results">
   <div class="card-body">
     <h5 class="card-title">{{title}}</h5>
     <p class="card-text">{{summary}}</p>
