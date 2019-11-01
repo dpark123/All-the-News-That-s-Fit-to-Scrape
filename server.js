@@ -10,7 +10,7 @@ var db = require("./models/Index");
 var PORT = process.env.PORT || 8080;
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongooseHW";
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, { useUnifiedTopology:true, useNewUrlParser: true });
 // Initialize Express
 var app = express();
 
