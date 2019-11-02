@@ -21,4 +21,11 @@ $("#clear-all").on("click", function() {
   });
 });
 
+$("#scrapeArticles").on("click", function() {
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "/scrape"
+    })
+})
   

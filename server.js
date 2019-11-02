@@ -40,6 +40,7 @@ var results = {};
 // Connect to the Mongo DB
 // mongoose.connect("mongodb://localhost/mongooseHW", { useUnifiedTopology:true, useNewUrlParser: true });
 // Make a request via axios to grab the HTML body from the site of your choice
+
 app.get("/scrape", function (req, res) {
   axios.get("https://www.nytimes.com/section/world/").then(function (response) {
     // Load the HTML into cheerio and save it to a variable
@@ -50,7 +51,7 @@ app.get("/scrape", function (req, res) {
       var link = $(element).children("h2").children("a").attr("href");
       var title = $(element).children("h2").children("a").text();
       var summary = $(element).children("p").text();
-      if(i == 10) break;
+      // if(i == 10) break;
   
       results.title = title;
       results.link = link;
@@ -103,4 +104,3 @@ app.get("/articles", function (req, res) {
 app.listen(PORT, function () {
   console.log("App running on port " + PORT + "!");
 });
-
